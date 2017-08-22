@@ -1,0 +1,31 @@
+<html>
+<head>
+<link rel="stylesheet" 
+     href="style1.css"/>
+<title>login</title>
+</head>
+<body>
+<h1>login</h1>
+<form method="GET" action="">
+ <label for='nom'>nom:</label> 
+ <input type="text"  id="nom"
+        name="nom"/> <br/>
+ <label>prenom:</label> <input type="text" name="prenom"/> <br/>
+ <label>age :</label> 
+         <input type="number" name="age" min="0" max="150"/> <br/>
+ <label>role :</label> <select name="role">
+          <option value="admin">administrateur</option>
+		  <option value="customer">client</option>
+		  <option value="employee">employe</option>
+        </select> <br/>
+		<label> </label><input type="checkbox"  name="details"/>details <br/>
+	<label>	situation: </label><input type="radio"  checked name="situation"
+		value="celibataire"/>celibataire  
+		<input type="radio" name="situation"
+		value="marie"/> marie<br/>
+  <label>	commentaire: </label>
+ <textarea name="comment" rows="2"></textarea> <br/>
+ <label> </label><input type="submit" value="login"/>
+ </form>
+</body>
+</html>
