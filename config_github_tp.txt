@@ -1,0 +1,31 @@
+﻿username : didier-tp
+password : pwd...!
+email: d2f.defrance@gmail.com
+=====
+https://github.com/didier-tp/p1
+https://github.com/didier-tp/p2
+https://github.com/didier-tp/p3
+https://github.com/didier-tp/p4
+https://github.com/didier-tp/web1,web2,web3
+===
+git clone https://github.com/didier-tp/p4
+...
+git add *
+git commit -a -m messageXy
+git push
+ou bien
+git push https://username:password@github.com/didier-tp/p4 --all
+git push https://didier-tp:pwd...!@github.com/didier-tp/p4 --all
+
+
+git remote add GitHubOrigin https://didier-tp:pwd...!@github.com/didier-tp/p4.git
+git push -u GitHubOrigin master
+
+git remote add GitHubOrigin https://didier-tp:pwd...!@github.com/didier-tp/web3.git
+git push -u GitHubOrigin master
+
+====
+autres exemples:
+https://github.com/didier-mycontrib/jee-spring-app-demo.git
+                                   /test-bootstrap
+                                   /...
