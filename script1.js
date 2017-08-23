@@ -2,7 +2,7 @@ function operationAB(typeOp){
 	var sa = document.getElementById("a").value;
 	var sb = document.getElementById("b").value;
 	var res = 0;
-	if(typeOp=="addition"){
+	if(typeOp=='addition'){
 		res= Number(sa) + Number(sb);
 	}else if(typeOp=="soustraction"){
 		res= Number(sa) - Number(sb);
@@ -12,6 +12,16 @@ function operationAB(typeOp){
 		res= Number(sa) / Number(sb);
 	}
 	document.getElementById("idRes")
+	        .innerHTML=res;
+}
+
+function calculerOp(){
+	var a = Number(document.getElementById("idA").value);
+	var b = Number(document.getElementById("idB").value);
+	var op = document.getElementById("idOp").value;
+	//op = "a+b" ou "a*b" ou ...
+	var res = eval(op);
+	document.getElementById("idResOp")
 	        .innerHTML=res;
 }
 
