@@ -1,3 +1,25 @@
+//methode à rattacher à "Personne"
+function affPers(){
+	var ch= "nom="   +this.nom 
+	         + " prenom=" +this.prenom
+			 + " age=" +this.age;
+	console.log(ch);
+	document.write(ch + "<br/>");
+}
+
+//fonction constructeur de "Personne":
+function Personne(nom,prenom,age){
+	this.nom=nom;
+	this.prenom=prenom;
+	this.age=age;
+	this.afficher=affPers;
+	this.incrAge= function (){
+		//this.age = this.age + 1;
+		this.age++;
+	}
+}
+
+
 var resultatSimuAjax; //variable globale 
 
 function simulerAppelAjax(requete,callback){
