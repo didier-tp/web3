@@ -1,0 +1,25 @@
+<html>
+<head>
+<link rel="stylesheet" 
+     href="style1.css"/>
+<title>essaiJavscript</title>
+<script src="./script1.js"></script>
+</head>
+<body>
+    message:<span id="idMsg"></span><br/>
+	<form>
+	   <input type="button" value="afficher texte"
+	  onclick="afficherTexte('coucou')" />
+	</form>
+	<hr/>
+	<form>
+	 a:<input type="text" id="a"/> <br/>
+	 b:<input type="text" id="b"/> <br/>
+	   <input type="button" value="a+b"
+	  onclick="operationAB('addition')" />
+	   <input type="button" value="a*b"
+	  onclick="operationAB('multiplication')" /> <br/>
+	 res: <span id="idRes"></span>
+	</form>
+</body>
+</html>
