@@ -4,8 +4,12 @@ function operationAB(typeOp){
 	var res = 0;
 	if(typeOp=="addition"){
 		res= Number(sa) + Number(sb);
+	}else if(typeOp=="soustraction"){
+		res= Number(sa) - Number(sb);
 	}else if(typeOp=="multiplication"){
 		res= Number(sa) * Number(sb);
+	}else if(typeOp=="division"){
+		res= Number(sa) / Number(sb);
 	}
 	document.getElementById("idRes")
 	        .innerHTML=res;
