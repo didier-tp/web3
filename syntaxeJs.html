@@ -1,0 +1,49 @@
+<html>
+<head>
+<!-- <link rel="stylesheet" 
+     href="style1.css"/> -->
+<title>syntaxeJs</title>
+<script src="./script2.js"></script>
+</head>
+<body>
+    <!--
+	message:<span id="idMsg"></span><br/>
+	-->
+	xxxxxxx <br/>
+	<script>
+	 var v1="abc";
+	 var tabJours = ["lundi","mardi","mercredi",
+	   "jeudi","vendredi","samedi","dimanche"];
+	 //tabJours[tabJours.length]="AutreJeudi";
+	 //addInArray(tabJours,"AutreJeudi");
+	 tabJours.push("AutreJeudi");
+	 //document.write(v1);
+	 //document.write(tabJours);
+	 //tp1 afficher les éléments du tableau 
+	 //via boucle for(i=0;...;...))
+	 for(i=0;i<tabJours.length;i++){
+	   document.write("* " +tabJours[i]+"<br/>");
+	 }
+	 //tp2 afficher les éléments du tableau 
+	 //via boucle for(i in ...))
+	 for(i in tabJours){
+	   document.write("** " +tabJours[i]+"<br/>");
+	 }
+	 /*
+	 //version proche for/forEach de java/c#
+	 //javascript récent seulement (es6/es2015)
+	 for(objVal of tabJours){
+	   document.write("*** " +objVal+"<br/>");
+	 }*/
+	 /*
+	 window.setTimeout(
+	    "alert('suite')",3000);//3000ms=3s
+	*/
+	function fa(){
+	   alert("suite_3s_apres");
+	}
+	//window.setTimeout("fa()",3000);//3000ms=3s
+	window.setTimeout(fa,3000);//3000ms=3s
+	</script>
+</body>
+</html>

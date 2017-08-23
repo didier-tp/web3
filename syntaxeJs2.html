@@ -1,0 +1,26 @@
+<html>
+<head>
+<!-- <link rel="stylesheet" 
+     href="style1.css"/> -->
+<title>syntaxeJs</title>
+<script src="./script2.js"></script>
+</head>
+<body>
+	message:<span id="idMsg"></span><br/>
+	<br/>
+	<script>
+	function callbackFa(){
+	   //alert("suite_3s_apres");
+	   document.getElementById("idMsg")
+	      .innerHTML = resultatSimuAjax;//var globale
+	}
+	simulerAppelAjax("jourDeLaSemaine",
+	                callbackFa);
+    /* //resultat pas encore pres, affiché trop tot):					
+	document.getElementById("idMsg")
+	      .innerHTML = resultatSimuAjax;
+	*/	  
+	
+	</script>
+</body>
+</html>
