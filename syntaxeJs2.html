@@ -20,7 +20,22 @@
 	document.getElementById("idMsg")
 	      .innerHTML = resultatSimuAjax;
 	*/	  
-	
+	var vv="abc";
+	document.write("<hr/>"+typeof vv);
+	vv=12;
+	//vv=true;
+	document.write("<br/>"+typeof vv);
+	if( (typeof vv)=="number"){
+	   document.write("<br/>vv est un nombre");
+	   }
+	var v1="12";
+	var v2=12;
+	if(v1==v2){
+	  document.write("<br/>v1 == v2");
+	}
+	if(v1===v2){
+	  document.write("<br/>v1 === v2");
+	}
 	</script>
 </body>
 </html>
