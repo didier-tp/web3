@@ -35,10 +35,10 @@ function init(){
 }
 
 function lireValeursSaisies(){
-	if(!prod){
+	/*if(!prod){
 		prod = { id : 0 ,  nom : "?",
 				 prix : 0 ,	 couleur : "black"};
-	}
+	}*/
 	prod.id = inputId.value;
 	prod.nom = inputNom.value;
 	prod.prix = inputPrix.value;
@@ -47,7 +47,6 @@ function lireValeursSaisies(){
 
 function refreshImputFromCurrentProd(){
 	for(i in listeProd){
-		console.log("listeProd[i].id:"+listeProd[i].id);
 		if( listeProd[i].id == idProdSelected){
 			prod = listeProd[i];
 		}
