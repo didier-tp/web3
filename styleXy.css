@@ -1,3 +1,14 @@
+/*
+nomBalise { ...}
+.nomClasse { ...}
+#idZonePage { ...}
+*/
 .titre { color:blue;}
 .details { display:block; 
           margin-left:20px;}
+		  
+label { display:inline-block; width: 60px;}
+
+.aGauche { float:left; width:240px; 
+          overflow:auto; }
+.aDroite { margin-left:245px;  }		  

@@ -1,0 +1,40 @@
+<html>
+<head>
+<link rel="stylesheet" 
+     href="styleXy.css"/>
+<title>dom_crud</title>
+<script src="./dom_crud.js"></script>
+</head>
+<body>
+   <form >
+    <div class="aGauche">
+	   <label>id:</label><input type="text" id="idProd"/><br/>
+	   <label>nom:</label><input type="text" id="nom"/><br/>
+	   <label>prix:</label><input type="text" id="prix"/><br/>
+	   <label>couleur:</label><select id="couleur">
+	            <option>black</option>
+				<option>white</option>
+	            <option>red</option>
+				<option>green</option>
+				<option>blue</option>
+			</select> <br/>
+	   
+	</div>
+	<div class="aDroite">
+	   <input type="button" value="add"
+	          id="btnAdd" /><br/>
+	   <input type="button" value="update"
+	          id="btnUpdate" /><br/>
+	   <input type="button" value="delete"
+	          id="btnDelete" /><br/>
+	   <p>...future confirmation..</p>
+	</div>
+   <form>
+   <hr/>
+   <h2>liste des produits</h2>
+   <table border="1">
+      <tr><th>id</th><th>nom</th>
+	      <th>prix</th><th>couleur</th></tr>
+   </table>
+</body>
+</html>
