@@ -45,6 +45,16 @@ function lireValeursSaisies(){
 	prod.couleur = inputCouleur.value;
 }
 
+function testNoDuplicatedId(newId){
+	var res=true;
+	for(i in listeProd){
+		if( listeProd[i].id == newId){
+			res=false;
+		}
+	}
+	return res;
+}
+
 function refreshImputFromCurrentProd(){
 	for(i in listeProd){
 		if( listeProd[i].id == idProdSelected){
@@ -68,9 +78,14 @@ function ajouter(event){
  //alert("click sur " + event.target.value);
  prod = new Produit();
  lireValeursSaisies();
- listeProd.push(prod);//ajout dans liste en mémoire
- logObject(prod);
- ajouterLigneDansTableau();//ajout dans tab html
+ if(testNoDuplicatedId(prod.id)){
+	listeProd.push(prod);//ajout dans liste en mémoire
+	logObject(prod);
+	ajouterLigneDansTableau();//ajout dans tab html
+ }else {
+	 alert("duplicated id !!!");
+	 inputId.focus();
+ }
 }
 
 function ajouterLigneDansTableau(){
