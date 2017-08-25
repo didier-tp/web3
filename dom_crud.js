@@ -10,12 +10,7 @@ var prod; //objet js "produit courant"
 		  
 var listeProd =new Array(); //liste des produits (vide ou pas)		  
 
-function Produit(){
-	this.id=0;
-	this.nom="?";
-	this.prix=0;
-	this.couleur="black";
-}
+
 
 function init(){
  inputNom = document.getElementById("nom");
@@ -31,7 +26,15 @@ function init(){
     btnAdd.style.fontWeight="bold";
 
   btnAdd.addEventListener("click",ajouter);
-    	 
+    
+  var btnDelete = 
+	  document.getElementById("btnDelete");
+   btnDelete.addEventListener("click",supprimer);	  
+}
+function supprimer(event){
+	var trASuppr = 
+	  document.getElementById("tr"+prod.id);
+	 trASuppr.parentNode.removeChild(trASuppr);
 }
 
 function lireValeursSaisies(){
@@ -74,6 +77,14 @@ function logObject(obj){
 		console.log(obj[indexPropriete]);
 	}*/
 }
+
+function Produit(){
+	this.id=0;
+	this.nom="?";
+	this.prix=0;
+	this.couleur="black";
+}
+
 function ajouter(event){
  //alert("click sur " + event.target.value);
  prod = new Produit();
@@ -92,6 +103,7 @@ function ajouterLigneDansTableau(){
 //var newTr = document.createElement("tr");
 //tabProduits.appendChild(newTr);
 var newTr = tabProduits.insertRow(-1);
+newTr.setAttribute("id","tr"+prod.id);
 //var newTd1 = document.createElement("td");
 //newTr.appendChild(newTd1);
 var newTd1 = newTr.insertCell(0);
@@ -110,9 +122,9 @@ function selectProdFromCurrentLine(event){
 	var trNodeList = tabProduits
 	        .getElementsByTagName("tr");
 	var nbLines = trNodeList.length;
-	for(i=0;i<nbLines;i++){
+	for(i=1;i<nbLines;i++){
 		var tr = trNodeList.item(i);
-		tr.firstChild.style.backgroundColor="white";
+		tr.querySelector("td").style.backgroundColor="white";
 	}
 	
 	var currentTdForIdProd = event.target;

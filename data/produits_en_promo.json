@@ -1,0 +1,5 @@
+[
+{ "id": 1 , "nom" : "cahier" , "prix" : 1.60 , "couleur" : "red"},
+{ "id": 2 , "nom" : "stylo" , "prix" : 1.10 , "couleur" : "blue"},
+{ "id": 3 , "nom" : "gomme" , "prix" : 1.80 , "couleur" : "white"}
+]
