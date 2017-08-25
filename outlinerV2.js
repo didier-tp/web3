@@ -17,8 +17,7 @@ function init(){
 }
 
 function developperContracterEnRelatif(event){
-	var btnPlusMoins = event.target;
-	  document.getElementById("btnPlusMoins");  
+	var btnPlusMoins = event.target;  
     var divDetails = btnPlusMoins.parentNode.querySelector(".details");
 	  
     if(btnPlusMoins.value=="+"){

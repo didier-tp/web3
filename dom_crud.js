@@ -11,7 +11,6 @@ var prod; //objet js "produit courant"
 var listeProd =new Array(); //liste des produits (vide ou pas)		  
 
 
-
 function init(){
  inputNom = document.getElementById("nom");
  inputId = document.getElementById("idProd");
@@ -23,18 +22,39 @@ function init(){
 	var btnAdd = 
 	  //document.getElementById("btnAdd"); 
 	  document.querySelector("#btnAdd");
-    btnAdd.style.fontWeight="bold";
-
   btnAdd.addEventListener("click",ajouter);
     
   var btnDelete = 
 	  document.getElementById("btnDelete");
    btnDelete.addEventListener("click",supprimer);	  
 }
+
 function supprimer(event){
-	var trASuppr = 
-	  document.getElementById("tr"+prod.id);
-	 trASuppr.parentNode.removeChild(trASuppr);
+	if(prod){
+	  //console.log("avant suppression:"+JSON.stringify(listeProd));
+	  for(i in listeProd){
+		  if(listeProd[i] && listeProd[i].id == idProdSelected){
+			 //delete listeProd[i]; break;
+			  //NB: delete ...[i] met à null ...[i]
+			  listeProd.splice(i,1); break;
+			  //listeProd.splice(i,2,val1,val2);
+			  //remplace [i] et [i+1] par val1 et val2
+			  //listeProd.splice(i,1); 
+			  //remplace par rien
+			  //et donc supprime
+		  }
+	  }
+	  //console.log("apres suppression:"+JSON.stringify(listeProd));
+	  var trASuppr = 
+	   document.getElementById("tr"+prod.id);
+	   if(trASuppr){
+	       trASuppr.parentNode.removeChild(trASuppr);
+	   }
+	   
+	    idProdSelected=0;
+		prod=new Produit();
+		refreshImputFromCurrentProd();
+	}
 }
 
 function lireValeursSaisies(){
@@ -51,7 +71,7 @@ function lireValeursSaisies(){
 function testNoDuplicatedId(newId){
 	var res=true;
 	for(i in listeProd){
-		if( listeProd[i].id == newId){
+		if( listeProd[i] && listeProd[i].id == newId){
 			res=false;
 		}
 	}
@@ -60,7 +80,7 @@ function testNoDuplicatedId(newId){
 
 function refreshImputFromCurrentProd(){
 	for(i in listeProd){
-		if( listeProd[i].id == idProdSelected){
+		if( listeProd[i] && listeProd[i].id == idProdSelected){
 			prod = listeProd[i];
 		}
 	}
