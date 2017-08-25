@@ -26,7 +26,31 @@ function init(){
     
   var btnDelete = 
 	  document.getElementById("btnDelete");
-   btnDelete.addEventListener("click",supprimer);	  
+   btnDelete.addEventListener("click",supprimer);
+
+ var btnUpdate = 
+	  document.getElementById("btnUpdate");
+   btnUpdate.addEventListener("click",modifier);   
+}
+
+function modifier(event){
+	if(prod){
+		lireValeursSaisies();
+		remplacerValeursDeLigneDansTableau(prod);
+	}
+}
+
+function remplacerValeursDeLigneDansTableau(prod){
+	var trAModif = 
+	   document.getElementById("tr"+prod.id);
+	   if(trAModif){
+	      //var listeTd = trAModif.querySelectorAll("td");
+		  var listeTd = trAModif.getElementsByTagName("td");
+		  listeTd[0].innerHTML=prod.id;
+		  listeTd[1].innerHTML=prod.nom;
+		  listeTd[2].innerHTML=prod.prix;
+		  listeTd[3].innerHTML=prod.couleur;
+	   }
 }
 
 function supprimer(event){
@@ -40,8 +64,7 @@ function supprimer(event){
 			  //listeProd.splice(i,2,val1,val2);
 			  //remplace [i] et [i+1] par val1 et val2
 			  //listeProd.splice(i,1); 
-			  //remplace par rien
-			  //et donc supprime
+			  //remplace par rien et donc supprime
 		  }
 	  }
 	  //console.log("apres suppression:"+JSON.stringify(listeProd));
