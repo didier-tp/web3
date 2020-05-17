@@ -157,7 +157,7 @@ var newTd2 = newTr.insertCell(1);
 newTd2.innerHTML=prod.nom;
 var newTd3 = newTr.insertCell(2);
 newTd3.innerHTML=prod.prix;
-var newTd4 = newTr.insertCell(2);
+var newTd4 = newTr.insertCell(3);
 newTd4.innerHTML=prod.couleur;
 }
 
